@@ -1,3 +1,5 @@
+name: cicd-demo-actions
+run-name: ${{ github.actor }}
 on: push
 jobs:
   build-node:
