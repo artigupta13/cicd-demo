@@ -3,6 +3,9 @@ on: push
 jobs:
   build-node:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 16.x, 14.x]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
