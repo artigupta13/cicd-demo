@@ -5,8 +5,9 @@ jobs:
     steps:
       - run: node --version
       - run: npm --version
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '14'
       - uses: actions/checkout@v4
       - run : npm install
       - run : node app.js
