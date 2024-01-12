@@ -1,4 +1,4 @@
-name: cicd-demo-actions
+name: unit tests
 on: push
 jobs:
   build-node:
@@ -11,4 +11,6 @@ jobs:
       - run: node --version
       - run: npm --version
       - run: npm install
+      - name: tests
+        run: npm test
       - run: node app.js
